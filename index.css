@@ -1,45 +1,252 @@
-body {
+/* Reset and base styles */
+* {
   margin: 0;
-  padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
   min-width: 400px;
 }
 
+.container {
+  max-width: 100%;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Header styles */
+header {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo i {
+  font-size: 24px;
+  color: #4c6ef5;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* Input group styles */
+.input-group {
+  display: flex;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
 input {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid #5f9341;
-  margin-bottom: 4px;
+  flex-grow: 1;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s;
 }
 
-button {
-  background: #5f9341;
+input:focus {
+  outline: none;
+  border-color: #4c6ef5;
+  box-shadow: 0 0 0 3px rgba(76, 110, 245, 0.15);
+}
+
+input::placeholder {
+  color: #a0aec0;
+}
+
+/* Button styles */
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.btn i {
+  font-size: 14px;
+}
+
+.primary {
+  background-color: #4c6ef5;
   color: white;
-  padding: 10px 20px;
-  border: 1px solid #5f9341;
-  font-weight: bold;
 }
 
-/* Style the button according to the provided design */
-
-#delete-btn {
-  background: white;
-  color: #5f9341;
+.primary:hover {
+  background-color: #3b5bdb;
 }
 
-ul {
-  margin-top: 20px;
+.secondary {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.secondary:hover {
+  background-color: #cbd5e0;
+}
+
+.danger {
+  background-color: #fff5f5;
+  color: #e53e3e;
+  border: 1px solid #fed7d7;
+}
+
+.danger:hover {
+  background-color: #fed7d7;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Leads container */
+.leads-container {
+  margin-top: 25px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.leads-wrapper {
+  min-height: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #f8fafc;
+}
+
+/* List styles */
+.leads-list {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
 }
 
-li {
-  margin-top: 5px;
+.leads-list li {
+  padding: 12px 15px;
+  border-bottom: 1px solid #edf2f7;
+  transition: background-color 0.2s;
 }
 
-a {
-  color: #5f9341;
+.leads-list li:last-child {
+  border-bottom: none;
 }
 
+.leads-list li:hover {
+  background-color: #f1f5f9;
+}
 
+.leads-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #3182ce;
+  text-decoration: none;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+.leads-list a:before {
+  content: '\f0c1';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  color: #4c6ef5;
+  font-size: 12px;
+}
+
+.leads-list a:hover {
+  color: #2c5282;
+}
+
+/* Empty state */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  padding: 20px;
+  text-align: center;
+  color: #a0aec0;
+}
+
+.empty-state i {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.empty-state p {
+  font-size: 14px;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #a0aec0;
+  padding-top: 15px;
+  border-top: 1px solid #f0f0f0;
+}
+
+footer i {
+  color: #e53e3e;
+}
+
+/* Scrollbar styling */
+.leads-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.leads-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+.leads-wrapper::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 8px;
+}
+
+.leads-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 450px) {
+  .input-group, .action-buttons {
+      flex-direction: column;
+  }
+  
+  .container {
+      border-radius: 0;
+  }
+}
