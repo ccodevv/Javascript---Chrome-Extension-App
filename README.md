@@ -19,7 +19,7 @@ Lead Tracker is a Chrome extension designed to help users save and organize impo
 - Confirmation Dialogs: Safety verification before destructive actions like deletion
 - Loading States: Visual indicators when operations are in progress
 
-#Additional Features
+# Additional Features
 
 - Rich Lead Data: Stores title and timestamp alongside URLs
 - Text Truncation: Long titles are automatically truncated for better display
